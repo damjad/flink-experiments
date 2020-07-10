@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 #change this to the place where kafka is in your PC
-export KAFKA_HOME="/usr/local/kafka/"
-export FLINK_HOME="/usr/local/flink/"
+HOME="../`dirname $0`"
+
+export KAFKA_HOME="$HOME/binaries/kafka"
+export FLINK_HOME="$HOME/builds/incremental-migration/"
+export PROMETHEUS_HOME="$KAFKA_HOME/prometheus-2.16.0.linux-386"
 
 export N_PARTITIONS=4
 export TOPIC=words
