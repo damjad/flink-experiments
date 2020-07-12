@@ -6,5 +6,5 @@ export KAFKA_HOME="$HOME/binaries/kafka"
 export FLINK_HOME="$HOME/builds/incremental-migration/"
 export PROMETHEUS_HOME="$KAFKA_HOME/prometheus-2.16.0.linux-386"
 
-export N_PARTITIONS=1
+export N_PARTITIONS=5
 export TOPIC=words

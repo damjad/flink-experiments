@@ -1,0 +1,17 @@
+Grafana:
+    Local
+
+Steps:
+1. before every experiment set parallelism in the following files:
+
+==> load-balance-skew-word-count.properties
+parallelism=5
+source-parallelism=1
+
+generators.1.op.dist.bound=5
+# make sure the following has $parallelism values.
+generators.1.op.dist.weights=1,2,2,2,4
+
+==> environment.sh
+# make sure it is equal to $source-parallelism
+N_PARTITIONS=1
