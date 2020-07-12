@@ -1,0 +1,4 @@
+rhino.actions.log: /home/danish/FastWorkspace/BDMA/TUB/incremental-migration/morpheus-tests/rhino-logs/rhino-actions.log
+
+metrics.reporter.prom.class: org.apache.flink.metrics.prometheus.PrometheusReporter
+metrics.reporter.prom.port: 9250

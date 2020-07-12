@@ -2,7 +2,7 @@
 source "`dirname $0`/environment.sh"
 cd "`dirname $0`"
 bash remove-elements-kafka.sh &
-sleep 5
+sleep 30
 bash stop-kafka.sh &
 sleep 10
 bash stop-prometheus.sh &
