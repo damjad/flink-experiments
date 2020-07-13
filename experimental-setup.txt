@@ -8,10 +8,10 @@ Zookeeper:
     cloud-12
 
 Kafka:
-    cloud-13, cloud-14
+    cloud-13, cloud-14, (cloud-15)
 
 Flink:
-    cloud-15, cloud-16, cloud-17, cloud-18
+    cloud-16, cloud-17, cloud-18, cloud-19
 
 Steps:
 1. before every experiment set parallelism in the following files:
