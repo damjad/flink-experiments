@@ -8,3 +8,5 @@ export PROMETHEUS_HOME="$HOME/binaries/prometheus-2.16.0.linux-386"
 
 export N_PARTITIONS=10
 export TOPIC=words
+
+export ZOOKEEPER_ADDRESS=cloud-12.dima.tu-berlin.de:2181
