@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #change this to the place where kafka is in your PC
-HOME="../`dirname $0`"
+HOME="/share/hadoop/danish/flink-experiments/"
 
 export KAFKA_HOME="$HOME/binaries/kafka"
 export KAFKA_HOME_1="$HOME/binaries/kafka_1"
