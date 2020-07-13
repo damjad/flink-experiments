@@ -50,7 +50,7 @@ taskmanager.heap.mb: 23552
 
 # The number of task slots that each TaskManager offers. Each slot runs one parallel pipeline.
 
-taskmanager.numberOfTaskSlots: 8
+taskmanager.numberOfTaskSlots: 10
 
 # The parallelism used for programs that did not specify and other parallelism.
 
@@ -274,7 +274,7 @@ taskmanager.network.memory.buffers-per-replica: 255
 taskmanager.network.memory.buffers-per-replica-max: 256
 taskmanager.state.rocksdb.predef: spinning-memory
 taskmanager.network.memory.floating-buffers-per-gate: 64
-state.replication.jm.fs.dir: /data/users/bdelmonte/flink-experimental/vault/
+state.replication.jm.fs.dir: /data/users/danish/flink-experimental/vault/
 taskmanager.network.memory.buffers-replica-size: 32768
 state.replication.dumpStats: true
 taskmanager.network.netty.replication.low-watermark.factor: 1
@@ -323,4 +323,12 @@ metrics.reporter.slf4j.interval: 10 SECONDS
 #metrics.reporter.gang.addressingMode: MULTICAST
 
 
+rhino.actions.log: /data/users/danish/flink-experiments/test-data/morpheus-tests/policy-rates-repo/rhino/rhino-actions.log
+
+metrics.reporter.prom.class: org.apache.flink.metrics.prometheus.PrometheusReporter
+metrics.reporter.prom.port: 9250
+
+morpheus.policies.load-balancing.enabled: true
+morpheus.policies.load-balancing.warmup-cycles: 12
+morpheus.policies.load-balancing.agg-cycles: 5
 
