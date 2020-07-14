@@ -1,11 +1,11 @@
-<Configuration status="TRACE">
+<Configuration status="INFO">
 	<Appenders>
 		<Console name="LogToConsole" target="SYSTEM_OUT">
 			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
 		</Console>
 	</Appenders>
 	<Loggers>
-		<Logger name="org.apache.flink.morpheus" level="trace" additivity="false">
+		<Logger name="org.apache.flink.morpheus" level="debug" additivity="false">
 			<AppenderRef ref="LogToConsole"/>
 		</Logger>
 		<Root level="warn">

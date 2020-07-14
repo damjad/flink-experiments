@@ -6,6 +6,7 @@ export PROMETHEUS_HOME="$HOME/binaries/prometheus-2.16.0.linux-386"
 export KAFKA_HOME="$HOME/binaries/kafka"
 export RHINO_HOME="$HOME/build/incremental-migration/"
 export MORPHEUS_HOME=${RHINO_HOME}/morpheus-tests
+export GENERATOR_HOME=${RHINO_HOME}/morpheus-tests-data-generator
 
 export N_PARTITIONS=10
 export TOPIC=words
