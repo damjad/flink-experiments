@@ -7,4 +7,5 @@ export KAFKA_HEAP_OPTS="-Xmx6g"
 # For this jmx_prometheus_javaagent jar should be placed in $KAFKA_HOME
 export KAFKA_OPTS="-javaagent:$KAFKA_HOME/jmx_prometheus_javaagent-0.12.0.jar=0.0.0.0:7071:$KAFKA_HOME/kafka-2_0_0.yml" \
 
-${KAFKA_HOME}/bin/kafka-server-start.sh ${KAFKA_HOME}/config/server_1.properties
+${KAFKA_HOME}/bin/kafka-server-start.sh ${KAFKA_HOME}/config/server_1.properties > $HOME/logs/kafka-startup_1.log 2>&1 &
+echo $!> $HOME/pids/kafka_pid_1
