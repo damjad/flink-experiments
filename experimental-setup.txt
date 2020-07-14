@@ -14,7 +14,8 @@ Generators:
     cloud-16, cloud-17
 
 Flink:
-    cloud-18, cloud-19, cloud-20, cloud-21
+    JM: cloud-11
+    slaves: cloud-18, cloud-19, cloud-20, cloud-21
 
 Steps:
 1. before every experiment set parallelism in the following files:
