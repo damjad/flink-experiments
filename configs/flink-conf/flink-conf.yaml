@@ -328,6 +328,7 @@ rhino.actions.log: /data/users/danish/flink-experiments/test-data/morpheus-tests
 metrics.reporter.prom.class: org.apache.flink.metrics.prometheus.PrometheusReporter
 metrics.reporter.prom.port: 9250
 
+morpheus.policies.rescaling.enabled: false
 morpheus.policies.load-balancing.enabled: true
 morpheus.policies.load-balancing.warmup-cycles: 12
 morpheus.policies.load-balancing.agg-cycles: 5
