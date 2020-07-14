@@ -31,7 +31,7 @@ mode: old
 # automatically configure the host name based on the hostname of the node where the
 # JobManager runs.
 
-jobmanager.rpc.address: 0.0.0.0
+jobmanager.rpc.address: cloud-11
 
 # The RPC port where the JobManager is reachable.
 
