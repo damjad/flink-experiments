@@ -8,7 +8,7 @@ Zookeeper:
     cloud-12
 
 Kafka:
-    c   loud-13, cloud-14, (cloud-15)
+    cloud-13, cloud-14, (cloud-15)
 
 Generators:
     cloud-16, cloud-17
