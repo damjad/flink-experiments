@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 source "`dirname $0`/environment.sh"
-kill `cat $HOME/pids/prometheus`
+kill `cat $HOME/logs/gen-pid_1`
