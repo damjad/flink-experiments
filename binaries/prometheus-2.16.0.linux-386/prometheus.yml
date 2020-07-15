@@ -34,4 +34,4 @@ scrape_configs:
           # scheme defaults to 'http'.
 
     static_configs:
-     - targets: ['cloud-18.dima.tu-berlin.de:9250', 'cloud-19.dima.tu-berlin.de:9250', 'cloud-20.dima.tu-berlin.de:9250', 'cloud-21.dima.tu-berlin.de:9250']
+     - targets: ['cloud-11.dima.tu-berlin.de:9250', 'cloud-18.dima.tu-berlin.de:9250', 'cloud-19.dima.tu-berlin.de:9250', 'cloud-20.dima.tu-berlin.de:9250', 'cloud-21.dima.tu-berlin.de:9250']
