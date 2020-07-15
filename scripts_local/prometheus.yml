@@ -26,7 +26,7 @@ scrape_configs:
     # scheme defaults to 'http'.
 
     static_configs:
-      - targets: ['cloud-13.dima.tu-berlin.de:7071', 'cloud-14.dima.tu-berlin.de:7071']
+      - targets: ['localhost:7071', 'localhost:7071']
 
   - job_name: 'flink'
     scrape_interval: 2s
@@ -34,4 +34,4 @@ scrape_configs:
           # scheme defaults to 'http'.
 
     static_configs:
-     - targets: ['cloud-18.dima.tu-berlin.de:9250', 'cloud-19.dima.tu-berlin.de:9250', 'cloud-20.dima.tu-berlin.de:9250', 'cloud-21.dima.tu-berlin.de:9250']
+     - targets: ['localhost:9250', 'localhost:9251', 'localhost:9252','localhost:9253', 'localhost:9254']
