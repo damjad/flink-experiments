@@ -50,7 +50,7 @@ taskmanager.heap.mb: 23552
 
 # The number of task slots that each TaskManager offers. Each slot runs one parallel pipeline.
 
-taskmanager.numberOfTaskSlots: 10
+taskmanager.numberOfTaskSlots: 1
 
 # The parallelism used for programs that did not specify and other parallelism.
 
