@@ -8,7 +8,7 @@ export RHINO_HOME="$HOME/build/incremental-migration/"
 export MORPHEUS_HOME=${RHINO_HOME}/morpheus-tests
 export GENERATOR_HOME=${RHINO_HOME}/morpheus-tests-data-generator
 
-export N_PARTITIONS=10
+export N_PARTITIONS=8
 export TOPIC=words
 
 export ZOOKEEPER_ADDRESS=cloud-12.dima.tu-berlin.de:2181
