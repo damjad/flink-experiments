@@ -333,3 +333,4 @@ morpheus.policies.load-balancing.enabled: true
 morpheus.policies.load-balancing.warmup-cycles: 12
 morpheus.policies.load-balancing.agg-cycles: 5
 
+web.upload.dir: /data/users/danish/flink-experiments/test-data/jars/
