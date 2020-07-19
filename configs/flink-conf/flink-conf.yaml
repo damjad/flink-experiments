@@ -311,9 +311,9 @@ restart-strategy: handover
 
 env.java.opts: -XX:+UseNUMA  -XX:+UseCompressedOops -XX:+TieredCompilation -server -XX:+UseG1GC -Dorg.apache.flink.shaded.netty4.io.netty.buffer.bytebuf.checkAccessible=false -Dorg.apache.flink.shaded.netty4.io.netty.leakDetection.level=DISABLED -Dorg.apache.flink.shaded.netty4.io.netty.allocator.tinyCacheSize=4096 -Dorg.apache.flink.shaded.netty4.io.netty.allocator.normalCacheSize=1024 
 #env.java.opts: -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=31337 -XX:+UseCompressedOops -XX:+TieredCompilation -server -XX:+UseG1GC -Dorg.apache.flink.shaded.netty4.io.netty.buffer.bytebuf.checkAccessible=false -Dorg.apache.flink.shaded.netty4.io.netty.leakDetection.level=DISABLED -Dorg.apache.flink.shaded.netty4.io.netty.allocator.tinyCacheSize=4096 -Dorg.apache.flink.shaded.netty4.io.netty.allocator.normalCacheSize=1024 
-metrics.reporters: slf4j
-metrics.reporter.slf4j.class: org.apache.flink.metrics.slf4j.Slf4jReporter
-metrics.reporter.slf4j.interval: 10 SECONDS
+#metrics.reporters: slf4j
+#metrics.reporter.slf4j.class: org.apache.flink.metrics.slf4j.Slf4jReporter
+#metrics.reporter.slf4j.interval: 10 SECONDS
 
 
 #metrics.reporter.gang.class: org.apache.flink.metrics.ganglia.GangliaReporter
