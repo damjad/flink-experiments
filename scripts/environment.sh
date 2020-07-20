@@ -7,6 +7,7 @@ export KAFKA_HOME="$HOME/binaries/kafka"
 export RHINO_HOME="$HOME/build/incremental-migration/"
 export MORPHEUS_HOME=${RHINO_HOME}/morpheus-tests
 export GENERATOR_HOME=${RHINO_HOME}/morpheus-tests-data-generator
+export DSTAT_HOME="$HOME/binaries/dstat"
 
 export N_PARTITIONS=8
 export TOPIC=words
