@@ -8,6 +8,7 @@ export RHINO_HOME="$HOME/build/incremental-migration/"
 export MORPHEUS_HOME=${RHINO_HOME}/morpheus-tests
 export GENERATOR_HOME=${RHINO_HOME}/morpheus-tests-data-generator
 export DSTAT_HOME="$HOME/binaries/dstat"
+export VANILLA_HOME="$HOME/build/flink-1.6/"
 
 export N_PARTITIONS=8
 export TOPIC=words
