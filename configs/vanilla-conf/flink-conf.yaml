@@ -109,8 +109,8 @@ parallelism.default: 1
 # Directory for checkpoints filesystem, when using any of the default bundled
 # state backends.
 #
- state.checkpoints.dir: /data/4/peel/vanilla/tmp:/data/2/peel/vanilla/tmp
- state.backend.rocksdb.localdir: /data/1/peel/vanilla/tmp,/data/3/peel/vanilla/tmp
+state.checkpoints.dir: file:///data/4/peel/vanilla/tmp:file:///data/2/peel/vanilla/tmp
+state.backend.rocksdb.localdir: /data/1/peel/vanilla/tmp,/data/3/peel/vanilla/tmp
 
 # Default target directory for savepoints, optional.
 #
