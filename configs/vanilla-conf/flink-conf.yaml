@@ -104,12 +104,13 @@ parallelism.default: 1
 # Supported backends are 'jobmanager', 'filesystem', 'rocksdb', or the
 # <class-name-of-factory>.
 #
-# state.backend: filesystem
+ state.backend: rocksdb
 
 # Directory for checkpoints filesystem, when using any of the default bundled
 # state backends.
 #
-# state.checkpoints.dir: hdfs://namenode-host:port/flink-checkpoints
+ state.checkpoints.dir: /data/4/peel/vanilla/tmp:/data/2/peel/vanilla/tmp
+ state.backend.rocksdb.localdir: /data/1/peel/vanilla/tmp,/data/3/peel/vanilla/tmp
 
 # Default target directory for savepoints, optional.
 #
