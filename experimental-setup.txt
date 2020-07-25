@@ -37,3 +37,12 @@ N_PARTITIONS=1
 =================>
 org.apache.flink.morpheus.wordcount.SkewWordCount
 --properties-file /share/hadoop/danish/flink-experiments/configs/load-balance-skew-word-count.properties
+
+==================>
+1. Experiment # 1.
+source-parallelism=1, 2, 4
+n-virtual-nodes=4, 8, 16
+window-size=3000, 30000, 300000
+
+
+

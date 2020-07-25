@@ -105,12 +105,9 @@ parallelism.default: 1
 # <class-name-of-factory>.
 #
 state.backend: rocksdb
-
-# Directory for checkpoints filesystem, when using any of the default bundled
-# state backends.
-#
 state.checkpoints.dir: file:///data/4/peel/vanilla/tmp:file:///data/2/peel/vanilla/tmp
-state.backend.rocksdb.localdir: /data/1/peel/vanilla/tmp,/data/3/peel/vanilla/tmp
+state.backend.rocksdb.localdir: /data/1/peel/flink/tmp,/data/3/peel/flink/tmp
+
 
 # Default target directory for savepoints, optional.
 #
@@ -170,7 +167,13 @@ rest.port: 8081
 # to save on serialization cost.
 #
 # taskmanager.memory.preallocate: false
+taskmanager.memory.fraction: 0.5
 
+taskmanager.network.memory.fraction: 0.3
+taskmanager.network.memory.min: 536870912
+taskmanager.network.memory.max: 8589934592
+
+taskmanager.network.netty.transport: epoll
 # The classloading resolve order. Possible values are 'child-first' (Flink's default)
 # and 'parent-first' (Java's default).
 #
@@ -187,6 +190,8 @@ rest.port: 8081
 # taskmanager.network.memory.fraction: 0.1
 # taskmanager.network.memory.min: 67108864
 # taskmanager.network.memory.max: 1073741824
+taskmanager.network.memory.buffers-per-channel: 4
+
 
 #==============================================================================
 # Flink Cluster Security Configuration
@@ -209,6 +214,9 @@ rest.port: 8081
 # The configuration below defines which JAAS login contexts
 
 # security.kerberos.login.contexts: Client,KafkaClient
+
+env.java.opts: -XX:+UseNUMA  -XX:+UseCompressedOops -XX:+TieredCompilation -server -XX:+UseG1GC -Dorg.apache.flink.shaded.netty4.io.netty.buffer.bytebuf.checkAccessible=false -Dorg.apache.flink.shaded.netty4.io.netty.leakDetection.level=DISABLED -Dorg.apache.flink.shaded.netty4.io.netty.allocator.tinyCacheSize=4096 -Dorg.apache.flink.shaded.netty4.io.netty.allocator.normalCacheSize=1024
+
 
 #==============================================================================
 # ZK Security Configuration

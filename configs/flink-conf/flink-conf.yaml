@@ -254,11 +254,15 @@ taskmanager.network.replica.memory.max: 5368709120
 taskmanager.network.replica.memory.fraction: 0.3
 taskmanager.checkpoint.reader: zero-copy-fadvise-lazy
 state.replication.factor: 1 
+
 taskmanager.network.netty.transport: epoll
+
+taskmanager.memory.fraction: 0.5
+
 taskmanager.network.memory.fraction: 0.3
 taskmanager.network.memory.min: 536870912
 taskmanager.network.memory.max: 8589934592
-taskmanager.memory.fraction: 0.5
+
 taskmanager.rpc.port: 6132
 taskmanager.data.port: 6131
 taskmanager.tmp.dirs: /data/1/peel/flink/tmp:/data/2/peel/flink/tmp:/data/4/peel/flink/tmp:/data/3/peel/flink/tmp
@@ -269,6 +273,7 @@ state.backend.rocksdb.localdir: /data/1/peel/flink/tmp,/data/3/peel/flink/tmp
 state.replication.fs.dir: /data/4/peel/flink/tmp:/data/2/peel/flink/tmp
 state.checkpoints.dir: /data/4/peel/flink/tmp:/data/2/peel/flink/tmp
 state.replication.replica-slots: 120
+
 taskmanager.network.memory.buffers-per-channel: 4
 taskmanager.network.memory.buffers-per-replica: 255
 taskmanager.network.memory.buffers-per-replica-max: 256
