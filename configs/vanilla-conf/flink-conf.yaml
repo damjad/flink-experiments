@@ -104,7 +104,7 @@ parallelism.default: 1
 # Supported backends are 'jobmanager', 'filesystem', 'rocksdb', or the
 # <class-name-of-factory>.
 #
- state.backend: rocksdb
+state.backend: rocksdb
 
 # Directory for checkpoints filesystem, when using any of the default bundled
 # state backends.
