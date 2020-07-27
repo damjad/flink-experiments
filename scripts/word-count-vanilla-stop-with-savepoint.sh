@@ -7,4 +7,7 @@ OUTPUT=$($VANILLA_HOME/build-target/bin/flink cancel -s $VANILLA_HOME/savepoints
 
 echo $OUTPUT
 
-echo $OUTPUT | grep -oP 'file:\K.*' > $HOME/pids/word_count-fid
+SAVE_FILE=$(echo $OUTPUT | grep -oP 'file:\K.*')
+SAVE_FILE=${SAVE_FILE::-1}
+
+echo $SAVE_FILE > $HOME/pids/word_count-fid
