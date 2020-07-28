@@ -44,5 +44,97 @@ source-parallelism=1, 2, 4
 n-virtual-nodes=4, 8, 16
 window-size=3000, 30000, 300000
 
+Rhino-Load balancing (important):
+source-parallelism=4
+n-virtual-nodes=4
+window-size=30000
+
+Flink-Load balancing (important):
+source-parallelism=4-(5,6,7,8) --> check which one is the best.
+n-virtual-nodes=4
+window-size=30000
+
+Rhino-Load balancing (not-important):
+source-parallelism=2, 4
+n-virtual-nodes=4, 8, 16
+window-size=3000, 30000, 300000
+
+Flink-Load balancing (not-important):
+source-parallelism=2-(3,4,5,6,7,8) --> check which one is the best.
+n-virtual-nodes=4
+window-size=3000, 30000, 300000
 
 
+=======================================================> Stage 1
+
+1. Find sustainable throughput for each configuration.
+    - Take snapshots of Grafana plots. Flink flat out rate or total messages in per topic.
+    - See if flink is performing better than Rhino. Add Thread.sleep in aggregator.
+    -
+
+2. Perform load balance (important experiments)
+  Rhino:
+    - Number of VNodes per operator. (vnodes_per_operator.png)
+    - Number of records in per second per operator. (operators_records_in.png)
+    - Event latency per operator. (l_event_latency_orig.png)
+    - Processing latency per operator (l_processing_latency_orig.png) [TODO]
+    - Disk I + O per vm [TODO]
+    - Network I + O per vm [TODO]
+    - Memory usage per vm [TODO]
+    - CPU usage per vm [TODO]
+
+  Flink: you have to combine the latencies and policy rates data first. (log times for parallelism change to plot the intercepts)
+    - Number of records in per second per operator. (operators_records_in.png) [TODO]
+    - Event latency per operator. (l_event_latency_orig.png) [TODO]
+    - Processing latency per operator (l_processing_latency_orig.png) [TODO]
+    - Disk I + O per vm [TODO]
+    - Network I + O per vm [TODO]
+    - Memory usage per vm [TODO]
+    - CPU usage per vm [TODO]
+
+  Comparison: you have to add a column specifying if the values are from Rhino or Flink.
+    - Event mean latency (c_event_latency_orig_mean.png) [TODO]
+    - Processing mean latency (c_processing_latency_orig_mean.png) [TODO]
+    - Disk I + O [TODO]
+    - Network I + O [TODO]
+    - Memory usage [TODO]
+    - CPU usage [TODO]
+
+2. Perform load balance (non-important experiments) (maybe)
+  Comparison: you have to add a column specifying if the values are from Rhino or Flink.
+      - Event mean latency (c_event_latency_orig_mean.png) [TODO]
+      - Processing mean latency (c_processing_latency_orig_mean.png) [TODO]
+      - Disk I + O [TODO]
+      - Network I + O [TODO]
+      - Memory usage [TODO]
+      - CPU usage [TODO]
+
+3. Write everything possible for Stage 1. After this it will be complete and additions will be incremental. (Due date: 01 August -exp, 05 August -else)
+
+=======================================================> Stage x
+
+1. Adapt the nexmark queries to our needs as per requirements. (metrics, load-distribution(ask bonaVentura about it), generation)
+2. Perform load balance important experiments.
+    Comparison: you have to add a column specifying if the values are from Rhino or Flink.
+          - Event mean latency (c_event_latency_orig_mean.png) [TODO]
+          - Processing mean latency (c_processing_latency_orig_mean.png) [TODO]
+          - Disk I + O [TODO]
+          - Network I + O [TODO]
+          - Memory usage [TODO]
+          - CPU usage [TODO]
+3. Perform load balance non-important experiments. (maybe)
+4. Write everything possible for Stage 2. (7 days)
+
+=======================================================> Stage x_1
+
+1. Check if Rhino can change parallelism from the command line.
+2. if yes, do parallelism=1, find sustainable throughput. Run the system with 1.5 x sustainable throughput. Latency will rise. Change parallelism.
+    Comparison:
+      - Event mean latency (c_event_latency_orig_mean.png) [TODO]
+      - Processing mean latency (c_processing_latency_orig_mean.png) [TODO]
+      - Disk I + O [TODO]
+      - Network I + O [TODO]
+      - Memory usage [TODO]
+      - CPU usage [TODO]
+new-parallelism = ceil((agg. eventLatency / agg. ProcLatency * 1.1)) * parallelism
+3. Write everything possible for Stage 2. (2-4 days)
