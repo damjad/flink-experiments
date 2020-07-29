@@ -78,19 +78,19 @@ window-size=3000, 30000, 300000
     - Number of records in per second per operator. (operators_records_in.png)
     - Event latency per operator. (l_event_latency_orig.png)
     - Processing latency per operator (l_processing_latency_orig.png) [TODO]
-    - Disk I + O per vm [TODO]
-    - Network I + O per vm [TODO]
-    - Memory usage per vm [TODO]
-    - CPU usage per vm [TODO]
+    - Disk I + O per vm (disk_usage_total.png) [TODO] - Why it settles down after the handover?
+    - Network I + O per vm (net_usage_per_vm.png) [TODO] - Why it settles down after the handover?
+    - Memory usage per vm (mem_usage_total.png)
+    - CPU usage per vm (cpu_usage_per_vm.png, cpu_usage_total.png)
 
-  Flink: you have to combine the latencies and policy rates data first. (log times for parallelism change to plot the intercepts)
-    - Number of records in per second per operator. (operators_records_in.png) [TODO]
-    - Event latency per operator. (l_event_latency_orig.png) [TODO]
-    - Processing latency per operator (l_processing_latency_orig.png) [TODO]
-    - Disk I + O per vm [TODO]
-    - Network I + O per vm [TODO]
-    - Memory usage per vm [TODO]
-    - CPU usage per vm [TODO]
+  Flink: you have to combine the latencies and policy rates data first. [TODO] (log times for parallelism change to plot the intercepts)
+    - Number of records in per second per operator. (operators_records_in.png)
+    - Event latency per operator. (l_event_latency_orig.png)
+    - Processing latency per operator (l_processing_latency_orig.png)
+    - Disk I + O per vm
+    - Network I + O per vm
+    - Memory usage per vm
+    - CPU usage per vm
 
   Comparison: you have to add a column specifying if the values are from Rhino or Flink.
     - Event mean latency (c_event_latency_orig_mean.png) [TODO]
