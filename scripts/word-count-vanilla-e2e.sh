@@ -8,5 +8,5 @@ date '+%s' > /share/hadoop/danish/flink-experiments/test-data/morpheus-tests/pol
 bash word-count-vanilla-stop-with-savepoint.sh && \
 bash word-count-vanilla-run-with-savepoint.sh &&
 sleep 140s && \
-bash  word-count-vanilla-stop-with-savepoint.sh &&
+bash  word-count-vanilla-stop-with-savepoint.sh
 bash stop-combo-remote.sh
