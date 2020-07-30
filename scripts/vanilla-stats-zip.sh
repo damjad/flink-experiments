@@ -6,4 +6,4 @@ PREV_STAT=`ls -d $DIR/backups/* | grep vanilla | xargs stat $1 --printf="%y %n\n
 DSTAT_FILES=`ls -d $HOME/test-data/morpheus-tests/* | grep dstat | xargs stat $1 --printf="%y %n\n" | sort -n -r | head -4 |rev | cut -d" " -f1 | rev`
 DATE=`date '+%Y-%m-%d-%H:%M:%S'`
 
-zip -r stats-$DATE.zip latencies-output policy-rates-repo $DSTAT_FILES $PREV_STAT
+zip -r $DIR/stats-$DATE.zip latencies-output policy-rates-repo $DSTAT_FILES $PREV_STAT
