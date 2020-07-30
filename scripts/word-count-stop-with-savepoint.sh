@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 source "`dirname $0`/environment.sh"
 
-mkdir -p $VANILLA_HOME/savepoints
+mkdir -p $RHINO_HOME/savepoints
 JOB_ID=`cat $HOME/pids/word_count-jid`
-OUTPUT=$($VANILLA_HOME/build-target/bin/flink cancel -s $VANILLA_HOME/savepoints $JOB_ID)
+OUTPUT=$($RHINO_HOME/build-target/bin/flink cancel -s $RHINO_HOME/savepoints $JOB_ID)
 
 echo $OUTPUT
 
