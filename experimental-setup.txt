@@ -83,7 +83,7 @@ window-size=3000, 30000, 300000
     - Memory usage per vm (mem_usage_total.png)
     - CPU usage per vm (cpu_usage_per_vm.png, cpu_usage_total.png)
 
-  Flink: you have to combine the latencies and policy rates data first. [TODO] (log times for parallelism change to plot the intercepts)
+  Flink: you have to combine the latencies and policy rates data first.
     - Number of records in per second per operator. (operators_records_in.png)
     - Event latency per operator. (l_event_latency_orig.png)
     - Processing latency per operator (l_processing_latency_orig.png)
