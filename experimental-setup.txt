@@ -84,7 +84,7 @@ window-size=3000, 30000, 300000
     - CPU usage per vm (cpu_usage_per_vm.png, cpu_usage_total.png)
 
   Flink: you have to combine the latencies and policy rates data first.
-    - Number of records in per second per operator. (pm_operators_records_in.png) [TODO]
+    - Number of records in per second per operator. (pm_operators_records_in.png)
     - Event latency per operator. (l_event_latency_orig.png)
     - Processing latency per operator (l_processing_latency_orig.png)
     - Disk I + O per vm (disk_usage_total_per_vm.png, disk_usage_total.png)
@@ -93,12 +93,12 @@ window-size=3000, 30000, 300000
     - CPU usage per vm (cpu_usage_per_vm.png, cpu_usage_total.png)
 
   Comparison: you have to add a column specifying if the values are from Rhino or Flink.
-    - Event mean latency (c_event_latency_orig_mean.png) [TODO]
-    - Processing mean latency (c_processing_latency_orig_mean.png) [TODO]
-    - Disk I + O [TODO]
-    - Network I + O [TODO]
-    - Memory usage [TODO]
-    - CPU usage [TODO]
+    - Event orig, max, min latency (c_event_latency_orig_mean.png, c_event_latency_min.png, c_event_latency_max.png)
+    - Processing orig, max, min latency (c_proc_latency_orig_mean.png, c_proc_latency_min.png, c_proc_latency_max.png)
+    - Disk I + O
+    - Network I + O
+    - Memory usage
+    - CPU usage
 
 2. Perform load balance (non-important experiments) (maybe)
   Comparison: you have to add a column specifying if the values are from Rhino or Flink.
