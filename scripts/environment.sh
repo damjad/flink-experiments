@@ -16,3 +16,5 @@ export TOPIC=words
 export ZOOKEEPER_ADDRESS=cloud-12.dima.tu-berlin.de:2181
 export KAFKA_ADDRESS=cloud-13.dima.tu-berlin.de:9092
 export RHINO_ADDRESS=cloud-11.dima.tu-berlin.de:8081
+
+export PATH=$HOME/binaries/python/bin/:$PATH
